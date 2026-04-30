@@ -17,12 +17,10 @@ public class ProdutoCategoria {
     private Long id;
 
     @ManyToOne
-    //@MapsId("id")
-    @JoinColumn(name = "produto_id")
+    @JoinColumn(name = "produto_id", nullable = false)
     private Produto produto;
 
     @ManyToOne
-    //@MapsId("id")
-    @JoinColumn(name = "categoria_id")
+    @JoinColumn(name = "categoria_id", nullable = false)
     private Categoria categoria;
 }

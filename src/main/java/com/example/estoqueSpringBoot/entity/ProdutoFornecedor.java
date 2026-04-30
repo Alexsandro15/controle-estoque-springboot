@@ -17,12 +17,10 @@ public class ProdutoFornecedor {
     private Long id;
 
     @ManyToOne
-    //@MapsId("id")
-    @JoinColumn(name = "produto_id")
+    @JoinColumn(name = "produto_id", nullable = false)
     private Produto produto;
 
     @ManyToOne
-    //@MapsId("id")
-    @JoinColumn(name = "fornecedor_id")
+    @JoinColumn(name = "fornecedor_id", nullable = false)
     private Fornecedor fornecedor;
 }
